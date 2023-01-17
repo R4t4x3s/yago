@@ -1,0 +1,21 @@
+html
+  head
+    title Yago Simulation 
+  body
+    h1 Simulation ##{simulation.id}
+    fieldset
+        legend Quote
+        p Coverage ceiling: #{simulation.quote.coverageCeiling}
+        p Deductible: #{simulation.quote.deductible}
+        p Covers:
+          ul 
+            each val, key in simulation.quote.covers
+             li #{key}: #{val}
+    fieldset
+        legend Advice
+        p Adviced coverage ceiling formula:  #{simulation.advice.coverageCeilingFormula}
+        p Adviced deductible formula: #{simulation.advice.deductibleFormula}
+        p Adviced covers: 
+        ul
+            each val in simulation.advice.covers
+                li=val

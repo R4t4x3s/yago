@@ -1,0 +1,43 @@
+html
+  head
+    title Yago
+  body
+    h1 Yago RC Simulator
+    form(action='/simulations', method='post')
+        fieldset
+            legend Personal Info
+            p
+                label Email
+                    input(type='email' name='email')
+            p
+                label Name
+                    input(type='text' name='name')
+            p
+                label Last name
+                    input(type='text' name='lastName')
+            p
+                label Phone Number
+                    input(type='text' name='phoneNumber')
+            p
+                label Adress 
+                    input(type='text' name='address')
+        fieldset
+            input(type='hidden' name ='interest[type]' value='rc_pro')
+            input(type='hidden' name ='interest[sector]' value='medical')
+            legend Company Info
+            p
+                label Annual Revenues
+                    input(type='number' name='interest[annualRevenue]')
+            p
+                label Enterprise Number
+                    input(minlength="10" maxlength="10" type='text' name='interest[enterpriseNumber]')
+            p
+                label Legal Name
+                    input(type='text' name='interest[legalName]')
+            p
+                label Type 
+                    input(type='radio'  name='interest[naturalPerson]' value='true' checked)#legalStatus
+                    label(for='legalStatus') Natural Person
+                    input(type='radio'  name='interest[naturalPerson]' value='false')#legalStatus
+                    label(for='legalStatus') Legal Person
+        button(type='submit') Get a Simulation
