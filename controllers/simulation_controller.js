@@ -18,7 +18,6 @@ router.post('/', async (req, res, next) => {
     let lead = Lead.build(req.body)
     lead = Lead.create_with_interest(lead)
     let simulation = await simulationService.generateSimulation(lead.interest)
-    console.log(simulation)
     simulation = Simulation.create(simulation);
     res.redirect(303, `/simulations/${simulation.id}`)
 })

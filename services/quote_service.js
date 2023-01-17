@@ -22,36 +22,3 @@ module.exports = {
         }
     }
 }
-// function get(path, payload) {
-//     console.log(`fetching '/quotes/${path}...`)
-//     console.dir(payload)
-//     let resp = {
-//         "success": true,
-//         "message": "success",
-//         "data": {
-//             "available": true,
-//             "coverageCeiling": 300000,
-//             "deductible": 5000,
-//             "quoteId": "seniorTechChallenge618857637",
-//             "grossPremiums": {
-//                 "afterDelivery": 43.6,
-//                 "publicLiability": 163.5,
-//                 "professionalIndemnity": 196.2,
-//                 "entrustedObjects": 54.5,
-//                 "legalExpenses": 65.4
-//             }
-//         }
-//     }
-//     // TODO transform reponse into this 
-//     return {
-//         coverageCeiling: 300000,
-//         deductible: 5000,
-//         covers: {
-//             "afterDelivery": 43.6,
-//             "publicLiability": 163.5,
-//             "professionalIndemnity": 196.2,
-//             "entrustedObjects": 54.5,
-//             "legalExpenses": 65.4
-//         }
-//     }
-// }
